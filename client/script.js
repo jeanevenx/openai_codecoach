@@ -31,3 +31,11 @@ function typeText(element, text){
     }
   }, 20)
 }
+
+function generateUniqueId(){
+  const timestamp = Date.now();
+  const randomNumber = Math.random();
+  const hexadecimaString = randomNumber.toString(16);
+
+  return `id-${timestamp}-${hexadecimaString}`;
+}
