@@ -3,6 +3,7 @@ import user from './assets/user.svg';
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
+const URL_API = 'https://codecoach.onrender.com';
 
 let loadInterval;
 
@@ -78,7 +79,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
-  const response = await fetch('http://localhost:5000',{
+  const response = await fetch(URL_API, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
